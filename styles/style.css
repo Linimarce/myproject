@@ -550,44 +550,49 @@ body {
 }
 
 /* ===================== */
-/* ГЛАВНАЯ СЕКЦИЯ */
+/* ЭКСТРЕННЫЙ ФИКС ДЛЯ БАННЕРА */
 /* ===================== */
-.home-section {
-    background: linear-gradient(135deg, #2c5530 0%, #1e3a22 100%);
-    color: white;
-    text-align: center;
-    padding: 4rem 0;
+
+/* Убедимся, что контент виден */
+.banner {
+    position: relative !important;
+    height: auto !important;
+    min-height: 300px !important;
+    max-height: 500px !important;
+    overflow: hidden !important;
 }
 
-.home-section__content {
-    max-width: 800px;
-    margin: 0 auto;
+.banner__image {
+    width: 100% !important;
+    max-height: 400px !important;
+    object-fit: cover !important;
 }
 
-.home-section__title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+/* Убедимся, что секции видны */
+.section {
+    position: relative !important;
+    z-index: 1 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-.home-section__description {
-    font-size: 1.125rem;
-    line-height: 1.6;
-    margin-bottom: 2rem;
-    opacity: 0.9;
+/* Принудительно показываем всё */
+body > *:not(.banner) {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
-.home-section__button {
-    background-color: white;
-    color: #2c5530;
-    font-weight: 600;
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    text-decoration: none;
-    display: inline-block;
+/* Убираем возможное перекрытие */
+.header {
+    z-index: 1000 !important;
 }
 
-.home-section__button:hover {
-    background-color: #f8f9fa;
-    transform: translateY(-2px);
+.coffee-types,
+.combos,
+.giftset,
+.footer {
+    position: relative !important;
+    z-index: 10 !important;
 }
