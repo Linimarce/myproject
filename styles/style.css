@@ -548,3 +548,46 @@ body {
         font-size: 1.5rem;
     }
 }
+
+/* ===================== */
+/* ГЛАВНАЯ СЕКЦИЯ */
+/* ===================== */
+.home-section {
+    background: linear-gradient(135deg, #2c5530 0%, #1e3a22 100%);
+    color: white;
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.home-section__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home-section__title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.home-section__description {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.home-section__button {
+    background-color: white;
+    color: #2c5530;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.home-section__button:hover {
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
