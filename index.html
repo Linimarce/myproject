@@ -6,174 +6,163 @@
     <title>Revo Coffee — Премиальный кофе из отборных зёрен</title>
     <link rel="icon" type="image/x-icon" href="assets/img/LOGO.png">
     <meta name="description" content="Revo Coffee — элитный кофе, идеальный подарок для ценителей. Натуральные зерна, обжарка по традиционным рецептам.">
+    <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
-    <!-- HEADER / ШАПКА -->
-    <header>
-        <div>
-            <!-- Логотип -->
-            <div>
-                <img src="assets/img/LOGO.png" alt="Revo Coffee">
+<body class="page">
+    <header class="header">
+        <div class="header__container">
+            <div class="header__logo">
+                <img src="assets/img/LOGO.png" alt="Revo Coffee" class="logo__image">
             </div>
             
-            <!-- Навигация -->
-            <nav>
-                <ul>
-                    <li><a href="#home">ГЛАВНАЯ</a></li>
-                    <li><a href="#types">ВИДЫ КОФЕ</a></li>
-                    <li><a href="#combo">КОМБО НАБОРЫ</a></li>
-                    <li><a href="#giftset">ПОДАРОЧНЫЕ НАБОРЫ</a></li>
-                    <li><a href="#contact">КОНТАКТЫ</a></li>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">ГЛАВНАЯ</a></li>
+                    <li class="nav__item"><a href="#types" class="nav__link">ВИДЫ КОФЕ</a></li>
+                    <li class="nav__item"><a href="#combo" class="nav__link">КОМБО НАБОРЫ</a></li>
+                    <li class="nav__item"><a href="#giftset" class="nav__link">ПОДАРОЧНЫЕ НАБОРЫ</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">КОНТАКТЫ</a></li>
                 </ul>
             </nav>
             
-            <!-- Корзина -->
-            <div>
-                <img src="assets/icons/shopping-cart-3.png" alt="Корзина покупок">
-                <span>Ваши покупки: 2</span>
+            <div class="header__cart cart">
+                <img src="assets/icons/shopping-cart-3.png" alt="Корзина покупок" class="cart__icon">
+                <span class="cart__count">Ваши покупки: 2</span>
             </div>
+        </div>
 
-            <div>
-                <h1>КОФЕ ТОЛЬКО ДЛЯ ВАС</h1>
-                <img src="assets/img/Баннер.png" alt="Кофейные зёрна">
-            </div>
-                    </div>
+        <div class="header__banner banner">
+            <h1 class="banner__title">КОФЕ ТОЛЬКО ДЛЯ ВАС</h1>
+            <img src="assets/img/Баннер.png" alt="Кофейные зёрна" class="banner__image">
+        </div>
     </header>
 
-
-        <!-- COFFEE TYPES / ВИДЫ КОФЕ -->
-    <section id="types">
-        <div>
-            <div>
-                <h2>СТАНДАРТНЫЙ ВКУС, ИДЕАЛЬНОЕ СОЧЕТАНИЕ</h2>
-                <p>Выберите свой любимый вкус</p>
+    <section id="types" class="section coffee-types">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">СТАНДАРТНЫЙ ВКУС, ИДЕАЛЬНОЕ СОЧЕТАНИЕ</h2>
+                <p class="section__subtitle">Выберите свой любимый вкус</p>
             </div>
             
-            <div>
-                <div>
-                    <img src="assets/icons/ic.png" alt="REVO Утренний">
-                    <h3>REVO Утренний</h3>
-                    <p>Кстати, сделанные на&nbsp;базе интернет-аналитики выводы формируют глобальную экономическую сеть и&nbsp;при этом&nbsp;&mdash; описаны максимально подробно! Равным образом, перспективное планирование позволяет выполнить важные задания по&nbsp;разработке укрепления моральных ценностей. Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что повышение уровня гражданского сознания требует от&nbsp;нас анализа новых предложений.</p>
-                    <div>990 ₽</div>
-                    <button>КУПИТЬ СЕЙЧАС</button>
+            <div class="coffee-types__list">
+                <div class="card coffee-card">
+                    <img src="assets/icons/ic.png" alt="REVO Утренний" class="coffee-card__image">
+                    <h3 class="coffee-card__title">REVO Утренний</h3>
+                    <p class="coffee-card__description">Кстати, сделанные на&nbsp;базе интернет-аналитики выводы формируют глобальную экономическую сеть и&nbsp;при этом&nbsp;&mdash; описаны максимально подробно! Равным образом, перспективное планирование позволяет выполнить важные задания по&nbsp;разработке укрепления моральных ценностей.</p>
+                    <div class="coffee-card__price">990 ₽</div>
+                    <button class="button coffee-card__button">КУПИТЬ СЕЙЧАС</button>
                 </div>
                 
-                <div>
-                    <img src="assets/icons/IC (1).png" alt="REVO Повседневный">
-                    <h3>REVO Повседневный</h3>
-                    <p>Прежде всего, выбранный нами инновационный путь создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса прогресса профессионального сообщества. Значимость этих проблем настолько очевидна, что понимание сути ресурсосберегающих технологий требует определения и&nbsp;уточнения кластеризации усилий. Наше дело не&nbsp;так однозначно, как может показаться: экономическая повестка сегодняшнего дня требует определения и&nbsp;уточнения прогресса профессионального сообщества.</p>
-                    <div>850 ₽</div>
-                    <button>КУПИТЬ СЕЙЧАС</button>
+                <div class="card coffee-card">
+                    <img src="assets/icons/IC (1).png" alt="REVO Повседневный" class="coffee-card__image">
+                    <h3 class="coffee-card__title">REVO Повседневный</h3>
+                    <p class="coffee-card__description">Прежде всего, выбранный нами инновационный путь создаёт необходимость включения в&nbsp;производственный план целого ряда внеочередных мероприятий с&nbsp;учётом комплекса прогресса профессионального сообщества.</p>
+                    <div class="coffee-card__price">850 ₽</div>
+                    <button class="button coffee-card__button">КУПИТЬ СЕЙЧАС</button>
                 </div>
                 
-                <div>
-                    <img src="assets/icons/IC (2).png" alt="REVO Оригинальный">
-                    <h3>REVO Оригинальный</h3>
-                    <p>Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что убеждённость некоторых оппонентов создаёт предпосылки для первоочередных требований. Но&nbsp;непосредственные участники технического прогресса разоблачены. Но&nbsp;явные признаки победы институционализации и&nbsp;по&nbsp;сей день остаются уделом либералов, которые жаждут быть описаны максимально подробно.</p>
-                    <div>1 390 ₽</div>
-                    <button>КУПИТЬ СЕЙЧАС</button>
+                  <div class="card coffee-card">
+                    <img src="assets/icons/IC (2).png" alt="REVO Оригинальный" class="coffee-card__image">
+                    <h3 class="coffee-card__title">REVO Оригинальный</h3>
+                    <p class="coffee-card__description">Мы&nbsp;вынуждены отталкиваться от&nbsp;того, что убеждённость некоторых оппонентов создаёт предпосылки для первоочередных требований. Но&nbsp;непосредственные участники технического прогресса разоблачены.</p>
+                    <div class="coffee-card__price">1 390 ₽</div>
+                    <button class="button coffee-card__button">КУПИТЬ СЕЙЧАС</button>
                 </div>
                 
-                <div>
-                    <img src="assets/icons/IC (3).png" alt="REVO Интенсивный">
-                    <h3>REVO Интенсивный</h3>
-                    <p>И&nbsp;нет сомнений, что непосредственные участники технического прогресса в&nbsp;равной степени предоставлены сами себе. В&nbsp;рамках спецификации современных стандартов, элементы политического процесса освещают чрезвычайно интересные особенности картины в&nbsp;целом, однако конкретные выводы, разумеется, объективно рассмотрены соответствующими инстанциями. Наше дело не&nbsp;так однозначно, как может показаться: высокое качество позиционных исследований требует определения и&nbsp;уточнения поставленных обществом задач.</p>
-                    <div>700 ₽</div>
-                    <button>КУПИТЬ СЕЙЧАС</button>
+                <div class="card coffee-card coffee-card--featured">
+                    <img src="assets/icons/IC (3).png" alt="REVO Интенсивный" class="coffee-card__image">
+                    <h3 class="coffee-card__title">REVO Интенсивный</h3>
+                    <p class="coffee-card__description">И&nbsp;нет сомнений, что непосредственные участники технического прогресса в&nbsp;равной степени предоставлены сами себе. В&nbsp;рамках спецификации современных стандартов, элементы политического процесса освещают чрезвычайно интересные особенности картины в&nbsp;целом.</p>
+                    <div class="coffee-card__price">700 ₽</div>
+                    <button class="button coffee-card__button">КУПИТЬ СЕЙЧАС</button>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- PRODUCTS / КОМБО НАБОРЫ -->
-    <section id="combo">
-        <div>
-            <div>
-                <h2>ВАШ ПЕРСОНАЛЬНЫЙ КОФЕ</h2>
-                <p>Выберите идеальный набор для себя</p>
+    <section id="combo" class="section combos">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">ВАШ ПЕРСОНАЛЬНЫЙ КОФЕ</h2>
+                <p class="section__subtitle">Выберите идеальный набор для себя</p>
             </div>
             
-            <div>
-                <!-- КАРТОЧКА 1 -->
-                <article>
-                    <div>
-                        <img src="assets/img/image (1).png" alt="Combo Revo Интенсивный">
+            <div class="combos__list">
+                <article class="card combo-card">
+                    <div class="combo-card__image-wrapper">
+                        <img src="assets/img/image (1).png" alt="Combo Revo Интенсивный" class="combo-card__image">
                     </div>
-                    <div>
-                        <h3>Комбо Revo Интенсивный</h3>
-                        <p>
+                    <div class="combo-card__content">
+                        <h3 class="combo-card__title">Комбо Revo Интенсивный</h3>
+                        <p class="combo-card__description">
                             Содержание кофеина в&nbsp;Revo Интенсивный достаточно высокое, чтобы сохранять бодрость и&nbsp;концентрацию в&nbsp;течение рабочего дня.
                         </p>
-                        <div>
-                            <span>1 470 ₽</span>
-                            <span>1 550 ₽</span>
+                        <div class="combo-card__prices">
+                            <span class="combo-card__price-current">1 470 ₽</span>
+                            <span class="combo-card__price-old">1 550 ₽</span>
                         </div>
-                        <div>
-                            <button>КУПИТЬ СЕЙЧАС</button>
-                            <button>ПОДРОБНЕЕ</button>
+                        <div class="combo-card__buttons">
+                            <button class="button combo-card__button combo-card__button--primary">КУПИТЬ СЕЙЧАС</button>
+                            <button class="button combo-card__button combo-card__button--secondary">ПОДРОБНЕЕ</button>
                         </div>
                     </div>
                 </article>
                 
-                <!-- КАРТОЧКА 2 -->
-                <article>
-                    <div>
-                        <img src="assets/img/IMAGE (2).png" alt="Combo Revo Повседневный">
+                <article class="card combo-card">
+                    <div class="combo-card__image-wrapper">
+                        <img src="assets/img/IMAGE (2).png" alt="Combo Revo Повседневный" class="combo-card__image">
                     </div>
-                    <div>
-                        <h3>Комбо Revo Повседневный</h3>
-                        <p>
+                    <div class="combo-card__content">
+                        <h3 class="combo-card__title">Комбо Revo Повседневный</h3>
+                        <p class="combo-card__description">
                             Revo Повседневный сочетает горьковатый вкус зёрен робусты с&nbsp;изысканным ароматом арабики.
                         </p>
-                        <div>
-                            <span>1 560 ₽</span>
-                            <span>1 650 ₽</span>
+                        <div class="combo-card__prices">
+                            <span class="combo-card__price-current">1 560 ₽</span>
+                            <span class="combo-card__price-old">1 650 ₽</span>
                         </div>
-                        <div>
-                            <button>КУПИТЬ СЕЙЧАС</button>
-                            <button>ПОДРОБНЕЕ</button>
+                        <div class="combo-card__buttons">
+                            <button class="button combo-card__button combo-card__button--primary">КУПИТЬ СЕЙЧАС</button>
+                            <button class="button combo-card__button combo-card__button--secondary">ПОДРОБНЕЕ</button>
                         </div>
                     </div>
                 </article>
                 
-                <!-- КАРТОЧКА 3 -->
-                <article>
-                    <div>
-                        <img src="assets/img/image (6).png" alt="Combo Revo Медовый">
+                <article class="card combo-card">
+                    <div class="combo-card__image-wrapper">
+                        <img src="assets/img/image (6).png" alt="Combo Revo Медовый" class="combo-card__image">
                     </div>
-                    <div>
-                        <h3>Комбо Revo Медовый</h3>
-                        <p>
+                    <div class="combo-card__content">
+                        <h3 class="combo-card__title">Комбо Revo Медовый</h3>
+                        <p class="combo-card__description">
                             Название &laquo;Медовый&raquo; происходит от&nbsp;особого метода обработки зёрен арабики, придающего лёгкую сладость.
                         </p>
-                        <div>
-                            <span>2 750 ₽</span>
-                            <span>2 600 ₽</span>
+                        <div class="combo-card__prices">
+                            <span class="combo-card__price-current">2 750 ₽</span>
+                            <span class="combo-card__price-old">2 600 ₽</span>
                         </div>
-                        <div>
-                            <button>КУПИТЬ СЕЙЧАС</button>
-                            <button>ПОДРОБНЕЕ</button>
+                        <div class="combo-card__buttons">
+                            <button class="button combo-card__button combo-card__button--primary">КУПИТЬ СЕЙЧАС</button>
+                            <button class="button combo-card__button combo-card__button--secondary">ПОДРОБНЕЕ</button>
                         </div>
                     </div>
                 </article>
                 
-                <!-- КАРТОЧКА 4 -->
-                <article>
-                    <div>
-                        <img src="assets/img/image (7).png" alt="Combo Revo Натуральный">
+                <article class="card combo-card">
+                    <div class="combo-card__image-wrapper">
+                        <img src="assets/img/image (7).png" alt="Combo Revo Натуральный" class="combo-card__image">
                     </div>
-                    <div>
-                        <h3>Комбо Revo Натуральный</h3>
-                        <p>
+                    <div class="combo-card__content">
+                        <h3 class="combo-card__title">Комбо Revo Натуральный</h3>
+                        <p class="combo-card__description">
                             Натуральная обработка сохраняет оригинальные вкусовые характеристики зёрен.
                         </p>
-                        <div>
-                            <span>2 490 ₽</span>
+                        <div class="combo-card__prices">
+                            <span class="combo-card__price-current">2 490 ₽</span>
                         </div>
-                        <div>
-                            <button>КУПИТЬ СЕЙЧАС</button>
-                            <button>ПОДРОБНЕЕ</button>
+                        <div class="combo-card__buttons">
+                            <button class="button combo-card__button combo-card__button--primary">КУПИТЬ СЕЙЧАС</button>
+                            <button class="button combo-card__button combo-card__button--secondary">ПОДРОБНЕЕ</button>
                         </div>
                     </div>
                 </article>
@@ -181,81 +170,75 @@
         </div>
     </section>
 
-        <!-- GIFTSET / ПОДАРОЧНЫЕ НАБОРЫ -->
-    <section id="giftset">
-        <div>
-            <div>
-                <h2>ПОДАРОЧНЫЕ НАБОРЫ</h2>
-                <p>Лучший подарок для лучшего друга</p>
+    <section id="giftset" class="section giftset">
+        <div class="container">
+            <div class="section__header">
+                <h2 class="section__title">ПОДАРОЧНЫЕ НАБОРЫ</h2>
+                <p class="section__subtitle">Лучший подарок для лучшего друга</p>
             </div>
             
-            <div>
-                <div>
-                    <img src="assets/img/pr-0018-r.png" alt="Подарочный набор фильтр-кофе">
+            <div class="giftset__card card">
+                <div class="giftset__image-wrapper">
+                    <img src="assets/img/pr-0018-r.png" alt="Подарочный набор фильтр-кофе" class="giftset__image">
                 </div>
-                <div>
-                    <h3>Подарочный набор «Классический фильтр-кофе»</h3>
-                    <p>
-                    Идеальный подарок для истинных ценителей кофе. Зёрна кофе тщательно отобраны, обжарены по&nbsp;уникальной технологии и&nbsp;секретным рецептам, перенятым у&nbsp;знаменитых мастеров. В&nbsp;сочетании с&nbsp;любовью и&nbsp;страстью создателей рождается чистый, изысканный кофе, созданный специально для вас.
+                <div class="giftset__content">
+                    <h3 class="giftset__title">Подарочный набор «Классический фильтр-кофе»</h3>
+                    <p class="giftset__description">
+                        Идеальный подарок для истинных ценителей кофе. Зёрна кофе тщательно отобраны, обжарены по&nbsp;уникальной технологии и&nbsp;секретным рецептам, перенятым у&nbsp;знаменитых мастеров.
                     </p>
                     
-                    <div>
-                        <div>
-                            <img src="assets/icons/IC_Mountain.png" alt="Высота">
-                            <div>
-                                <span>Высота произрастания</span>
-                                <span>700–800 м</span>
+                    <div class="giftset__features">
+                        <div class="giftset__feature">
+                            <img src="assets/icons/IC_Mountain.png" alt="Высота" class="giftset__feature-icon">
+                            <div class="giftset__feature-text">
+                                <span class="giftset__feature-label">Высота произрастания</span>
+                                <span class="giftset__feature-value">700–800 м</span>
                             </div>
                         </div>
-                        <div>
-                            <img src="assets/icons/IC_coffee.png" alt="Тип зёрен">
-                            <div>
-                                <span>Сорт зёрен</span>
-                                <span>Arabica Premium Blend</span>
+                        <div class="giftset__feature">
+                            <img src="assets/icons/IC_coffee.png" alt="Тип зёрен" class="giftset__feature-icon">
+                            <div class="giftset__feature-text">
+                                <span class="giftset__feature-label">Сорт зёрен</span>
+                                <span class="giftset__feature-value">Arabica Premium Blend</span>
                             </div>
                         </div>
                     </div>
                     
-                    <div>
-                        <span>2 850 ₽</span>
-                    </div>
+                    <div class="giftset__price">2 850 ₽</div>
                     
-                    <div>
-                        <button>КУПИТЬ СЕЙЧАС</button>
-                        <button>ПОДРОБНЕЕ</button>
+                    <div class="giftset__buttons">
+                        <button class="button giftset__button giftset__button--primary">КУПИТЬ СЕЙЧАС</button>
+                        <button class="button giftset__button giftset__button--secondary">ПОДРОБНЕЕ</button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-
-    <!-- FOOTER / ПОДВАЛ -->
-    <footer id="contact">
-        <div>
-            <div>
-                <div>
-                    <img src="assets/img/LOGO.png" alt="Revo Coffee">
-                    <p>
+    <footer id="contact" class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__logo">
+                    <img src="assets/img/LOGO.png" alt="Revo Coffee" class="footer__logo-image">
+                    <p class="footer__description">
                         Элитный кофе, созданный с&nbsp;любовью и&nbsp;уважением к&nbsp;традициям кофейного искусства.
                     </p>
                 </div>
                 
-                <div>
-                    <h4>Быстрые ссылки</h4>
-                    <ul>
-                        <li><a href="#home">Главная</a></li>
-                        <li><a href="#types">Виды кофе</a></li>
-                        <li><a href="#combo">Комбо наборы</a></li>
-                        <li><a href="#giftset">Подарочные наборы</a></li>
-                        <li><a href="#contact">Контакты</a></li>
+                <div class="footer__links">
+                    <h4 class="footer__title">Быстрые ссылки</h4>
+                    <ul class="footer__list">
+                        <li class="footer__item"><a href="#home" class="footer__link">Главная</a></li>
+                        <li class="footer__item"><a href="#types" class="footer__link">Виды кофе</a></li>
+                        <li class="footer__item"><a href="#combo" class="footer__link">Комбо наборы</a></li>
+                        <li class="footer__item"><a href="#giftset" class="footer__link">Подарочные наборы</a></li>
+                        <li class="footer__item"><a href="#contact" class="footer__link">Контакты</a></li>
                     </ul>
                 </div>
                 
-                <div>
-                    <h4>Контакты</h4>
-                    <p>
+                <div class="footer__contacts">
+                    <h4 class="footer__title">Контакты</h4>
+                    <p class="footer__contact-text">
                         Email: info@revo-coffee.ru<br>
                         Телефон: +7 (495) 777-77-77<br>
                         Адрес: Москва, ул. Кофейная, 22
@@ -263,7 +246,7 @@
                 </div>
             </div>
             
-            <div>
+            <div class="footer__copyright">
                 <p>&copy; Revo Coffee — 2025. Все права защищены.</p>
             </div>
         </div>
