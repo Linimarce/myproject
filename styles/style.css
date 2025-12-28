@@ -115,6 +115,9 @@ body {
     display: flex;
     list-style: none;
     gap: var(--spacing-md);
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap; /* Добавляем перенос на мобильных */
 }
 
 .nav__link {
@@ -124,6 +127,7 @@ body {
     padding: var(--spacing-xs) var(--spacing-sm);
     border-radius: 4px;
     transition: all 0.3s ease;
+    display: block; /* Для лучшего клика на мобильных */
 }
 
 .nav__link:hover {
@@ -549,3 +553,198 @@ body {
     }
 }
 
+/* Grid-сетка как в примере из задания */
+.content-grid_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.content-card {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.content-card__title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+.content-card__text {
+    color: var(--text-light);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+
+/* Desktop First - медиазапросы */
+
+/* Ноутбуки (меньше 1200px) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 1000px;
+    }
+    
+    .banner__title {
+        font-size: 2.25rem;
+    }
+}
+
+/* Планшеты (меньше 992px) */
+@media (max-width: 991px) {
+    .container {
+        max-width: 800px;
+    }
+    
+    .giftset__features {
+        flex-direction: column;
+        gap: var(--spacing-md);
+    }
+    
+    .masonry-grid__container {
+        column-count: 2;
+    }
+    
+    .banner__title {
+        font-size: 2rem;
+    }
+    
+    .section__title {
+        font-size: 1.75rem;
+    }
+}
+
+/* Мобильные в альбомной ориентации (меньше 768px) */
+@media (max-width: 767px) {
+    .header__container {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-md);
+    }
+    
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: var(--spacing-sm);
+        width: 100%;
+    }
+    
+    .nav__link {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .cart {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .giftset__card {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+    
+    .coffee-types__list,
+    .combos__list {
+        grid-template-columns: 1fr;
+    }
+    
+    .content-grid_container {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .masonry-grid__container {
+        column-count: 1;
+    }
+    
+    .footer__content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer__features {
+        flex-direction: column;
+    }
+    
+    .banner__title {
+        font-size: 1.75rem;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .section__title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Мобильные (меньше 576px) */
+@media (max-width: 575px) {
+    .container {
+        padding: 0 var(--spacing-md);
+    }
+    
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+    
+    .banner__title {
+        font-size: 1.5rem;
+    }
+    
+    .combo-card__buttons,
+    .giftset__buttons {
+        flex-direction: column;
+    }
+    
+    .combo-card__button,
+    .giftset__button {
+        width: 100%;
+    }
+    
+    .masonry-item--short {
+        height: 120px;
+    }
+    
+    .masonry-item--tall {
+        height: 200px;
+    }
+    
+    .masonry-item--very-tall {
+        height: 280px;
+    }
+}
+
+/* Очень маленькие экраны (меньше 400px) */
+@media (max-width: 399px) {
+    :root {
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+    }
+    
+    .banner__title {
+        font-size: 1.25rem;
+    }
+    
+    .section__title {
+        font-size: 1.25rem;
+    }
+    
+    .coffee-card__price,
+    .combo-card__price-current,
+    .giftset__price {
+        font-size: 1.25rem;
+    }
+}
