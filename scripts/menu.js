@@ -41,7 +41,7 @@ const scrollTopButton = document.getElementById('scrollTop');
 
 // Показываем кнопку после скролла (раньше - при 150px)
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 150) { // Было 300, уменьшили для более раннего появления
+    if (window.scrollY > 150) {
         scrollTopButton.classList.add('visible');
     } else {
         scrollTopButton.classList.remove('visible');
