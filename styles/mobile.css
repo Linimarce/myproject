@@ -1,6 +1,24 @@
+/* ===== МОБИЛЬНОЕ МЕНЮ ===== */
+
 /* Мобильное меню (скрыто на десктопе) */
 .mobile-nav {
     display: none;
+}
+
+/* Оверлей для меню (скрыт по умолчанию) */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998; /* Ниже меню, но выше всего остального */
+}
+
+.nav-overlay.active {
+    display: block;
 }
 
 /* Планшет (1024px и меньше) */
@@ -25,36 +43,41 @@
 
 /* Мобильные (768px и меньше) */
 @media (max-width: 768px) {
-    /* Показываем бургер СПРАВА */
+    /* Принудительно показываем бургер СПРАВА */
     .menu-toggle {
-        display: flex !important; /* Принудительно показываем */
+        display: flex !important;
         order: 3;
         margin-left: 10px;
+        position: relative;
+        z-index: 1002; /* Выше меню */
     }
     
-    /* Скрываем десктопное меню */
+    /* Принудительно скрываем десктопное меню */
     .nav {
         display: none !important;
     }
     
-    /* Показываем мобильное меню */
+    /* ===== МОБИЛЬНОЕ МЕНЮ (исправленная версия) ===== */
     .mobile-nav {
-        display: block;
+        display: block !important; /* Принудительно показываем */
         position: fixed;
         top: 0;
-        right: -100%;
-        width: 300px;
+        right: -100%; /* Скрыто за правым краем */
+        width: 280px; /* Немного уже */
         height: 100vh;
         background: white;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        padding: 100px 30px 30px;
-        transition: right 0.4s ease;
-        z-index: 1000;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        padding: 80px 20px 20px; /* Меньше отступ сверху */
+        transition: right 0.3s ease-in-out;
+        z-index: 1001; /* Выше оверлея, ниже бургера */
         overflow-y: auto;
+        visibility: hidden; /* Скрываем, но оставляем в DOM */
     }
     
+    /* Когда меню активно */
     .mobile-nav.active {
-        right: 0;
+        right: 0; /* Показываем */
+        visibility: visible; /* Делаем видимым */
     }
     
     .mobile-nav__list {
@@ -73,7 +96,7 @@
     .mobile-nav__link {
         display: block;
         width: 100%;
-        padding: 20px 0;
+        padding: 16px 0;
         font-size: 18px;
         font-weight: 600;
         color: var(--text-color);
@@ -86,22 +109,7 @@
     .mobile-nav__link.active {
         color: var(--primary-color);
         padding-left: 15px;
-    }
-    
-    /* Оверлей для меню */
-    .nav-overlay {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,0.5);
-        z-index: 999;
-    }
-    
-    .nav-overlay.active {
-        display: block;
+        background-color: var(--secondary-color);
     }
     
     /* Реорганизуем header для мобильных */
@@ -110,27 +118,43 @@
         align-items: center;
         justify-content: space-between;
         flex-wrap: nowrap;
+        position: relative;
+        z-index: 1000; /* Хедер выше оверлея */
     }
     
     /* Логотип слева */
     .logo {
         order: 1;
         flex-shrink: 0;
+        z-index: 1002; /* Выше меню */
+        position: relative;
     }
     
-    /* Корзина по центру */
+    /* Корзина */
     .header__right {
         order: 2;
         display: flex;
         align-items: center;
         gap: 10px;
         margin-left: auto;
+        position: relative;
+        z-index: 1002; /* Выше меню */
     }
     
     /* Бургер справа */
     .menu-toggle {
-        order: 3;
-        margin-left: 0;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+    }
+    
+    .menu-toggle.active .menu-toggle_line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .menu-toggle.active .menu-toggle_line:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
     }
     
     /* Скрываем текст корзины на маленьких экранах */
@@ -148,7 +172,12 @@
 /* Мелкие мобильные (480px и меньше) */
 @media (max-width: 480px) {
     .mobile-nav {
-        width: 100%;
+        width: 100% !important; /* На всю ширину */
+        right: -100%;
+    }
+    
+    .mobile-nav.active {
+        right: 0;
     }
     
     .logo img {
@@ -166,5 +195,10 @@
     
     .cart__icon {
         height: 20px;
+    }
+    
+    .mobile-nav__link {
+        padding: 18px 0;
+        font-size: 19px;
     }
 }
