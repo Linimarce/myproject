@@ -3,22 +3,27 @@
     .container {
         padding: 0 15px;
     }
+    
     .header__inner {
         padding: 15px 0;
     }
+    
     .nav__list {
         gap: 20px;
     }
 }
 
-/* Планшет и мобильные (768px и меньше) */
+/* Мобильные (768px и меньше) */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: flex; /* Показываем гамбургер */
+        display: flex;
     }
     
-    /* Основная навигация (скрыта по умолчанию) */
     .nav {
+        display: none;
+    }
+    
+    .mobile-nav {
         position: fixed;
         top: 0;
         right: -100%;
@@ -26,41 +31,47 @@
         height: 100vh;
         background: white;
         box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        padding: 80px 30px 30px;
+        padding: 100px 30px 30px;
         transition: right 0.4s ease;
         z-index: 1000;
         overflow-y: auto;
     }
     
-    .nav.active {
+    .mobile-nav.active {
         right: 0;
     }
     
-    .nav__list {
+    .mobile-nav__list {
+        list-style: none;
+        display: flex;
         flex-direction: column;
         gap: 0;
+        margin: 0;
+        padding: 0;
     }
     
-    .nav__item {
+    .mobile-nav__item {
         width: 100%;
     }
     
-    .nav__link {
+    .mobile-nav__link {
         display: block;
         width: 100%;
-        padding: 15px 0;
+        padding: 20px 0;
         font-size: 18px;
+        font-weight: 600;
+        color: var(--text-color);
+        text-decoration: none;
         border-bottom: 1px solid #eee;
+        transition: all 0.3s ease;
     }
     
-    .nav__link:hover,
-    .nav__link.active {
-        background: transparent;
+    .mobile-nav__link:hover,
+    .mobile-nav__link.active {
         color: var(--primary-color);
-        padding-left: 10px;
+        padding-left: 15px;
     }
     
-    /* Затемнение фона */
     .nav-overlay {
         display: none;
         position: fixed;
@@ -76,29 +87,42 @@
         display: block;
     }
     
-    /* Увеличиваем touch-зоны */
     .button {
         min-width: 120px;
+        min-height: 44px;
+    }
+    
+    .scroll-top {
+        width: 50px;
+        height: 50px;
+        bottom: 25px;
+        right: 25px;
+        font-size: 20px;
     }
 }
 
-/* Мобильные (480px и меньше) */
+/* Мелкие мобильные (480px и меньше) */
 @media (max-width: 480px) {
-    .nav {
+    .mobile-nav {
         width: 100%;
     }
+    
     .logo img {
         width: 100px;
-        height: auto;
     }
+    
     body {
         font-size: 17px;
     }
+    
+    .cart__count {
+        display: none; 
+    }
+    
     .scroll-top {
-        width: 52px;
-        height: 52px;
         bottom: 20px;
         right: 20px;
-        font-size: 22px;
+        width: 48px;
+        height: 48px;
     }
 }

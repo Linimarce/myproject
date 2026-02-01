@@ -16,36 +16,57 @@
     <header class="header">
         <div class="container">
             <div class="header__inner">
+                <!-- Логотип -->
                 <a href="#" class="logo">
                     <img src="assets/img/LOGO.png" alt="Revo Coffee" class="logo__image">
                 </a>
-                
-                <!-- Гамбургер-кнопка -->
-                <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
-                    <span class="menu-toggle_line"></span>
-                    <span class="menu-toggle_line"></span>
-                    <span class="menu-toggle_line"></span>
-                </button>
-                
-                <!-- Навигация -->
+
+                <!-- Навигация (десктопная версия) -->
                 <nav class="nav" id="mainNav">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">ГЛАВНАЯ</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link active">ГЛАВНАЯ</a></li>
                         <li class="nav__item"><a href="#types" class="nav__link">ВИДЫ КОФЕ</a></li>
                         <li class="nav__item"><a href="#combo" class="nav__link">КОМБО НАБОРЫ</a></li>
                         <li class="nav__item"><a href="#giftset" class="nav__link">ПОДАРОЧНЫЕ НАБОРЫ</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">КОНТАКТЫ</a></li>
                     </ul>
                 </nav>
-                
-                <!-- Корзина -->
-                <div class="header__cart cart">
-                    <img src="assets/icons/shopping-cart-3.png" alt="Корзина" class="cart__icon">
-                    <span class="cart__count">Ваши покупки: 2</span>
+
+                <!-- Правая часть: корзина + бургер -->
+                <div class="header__right">
+                    <!-- Корзина -->
+                    <div class="header__cart cart">
+                        <img src="assets/icons/shopping-cart-3.png" alt="Корзина" class="cart__icon">
+                        <span class="cart__count">Ваши покупки: 2</span>
+                    </div>
+
+                    <!-- Гамбургер-кнопка -->
+                    <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+                        <span class="menu-toggle_line"></span>
+                        <span class="menu-toggle_line"></span>
+                        <span class="menu-toggle_line"></span>
+                    </button>
                 </div>
             </div>
         </div>
+
+        <!-- Баннер -->
+        <div class="header__banner banner">
+            <h1 class="banner__title">КОФЕ ТОЛЬКО ДЛЯ ВАС</h1>
+            <img src="assets/img/Баннер.png" alt="Кофейные зёрна" class="banner__image">
+        </div>
     </header>
+
+    <!-- Мобильное меню (скрытое) -->
+    <nav class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav__list">
+            <li class="mobile-nav__item"><a href="#" class="mobile-nav__link active">ГЛАВНАЯ</a></li>
+            <li class="mobile-nav__item"><a href="#types" class="mobile-nav__link">ВИДЫ КОФЕ</a></li>
+            <li class="mobile-nav__item"><a href="#combo" class="mobile-nav__link">КОМБО НАБОРЫ</a></li>
+            <li class="mobile-nav__item"><a href="#giftset" class="mobile-nav__link">ПОДАРОЧНЫЕ НАБОРЫ</a></li>
+            <li class="mobile-nav__item"><a href="#contact" class="mobile-nav__link">КОНТАКТЫ</a></li>
+        </ul>
+    </nav>
 
         <div class="header__banner banner">
             <h1 class="banner__title">КОФЕ ТОЛЬКО ДЛЯ ВАС</h1>
@@ -297,7 +318,7 @@
         </div>
     </div>
     </section>
-    
+
     <!-- Кнопка "Наверх" -->
     <button class="scroll-top" id="scrollTop" aria-label="Наверх">↑</button>
 
