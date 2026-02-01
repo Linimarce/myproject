@@ -1,8 +1,3 @@
-/* Скрываем мобильное меню на десктопе */
-.mobile-nav {
-    display: none;
-}
-
 /* Планшет (1024px и меньше) */
 @media (max-width: 1024px) {
     .container {
@@ -20,14 +15,15 @@
 
 /* Мобильные (768px и меньше) */
 @media (max-width: 768px) {
-    /* Скрываем десктопную навигацию */
+    .menu-toggle {
+        display: flex;
+    }
+    
     .nav {
         display: none;
     }
     
-    /* Показываем мобильное меню и бургер */
     .mobile-nav {
-        display: block;
         position: fixed;
         top: 0;
         right: -100%;
@@ -76,7 +72,6 @@
         padding-left: 15px;
     }
     
-    /* Оверлей для меню */
     .nav-overlay {
         display: none;
         position: fixed;
@@ -92,29 +87,11 @@
         display: block;
     }
     
-    /* Переносим бургер влево */
-    .header__inner {
-        justify-content: flex-start; /* Сдвигаем всё к левому краю */
-    }
-    
-    .header__right {
-        margin-left: auto; /* Корзина остается справа */
-    }
-    
-    /* Бургер будет слева от логотипа */
-    .menu-toggle {
-        display: flex;
-        order: -1; /* Перемещаем бургер перед логотипом */
-        margin-right: 15px; /* Отступ от логотипа */
-    }
-    
-    /* Увеличиваем touch-зоны */
     .button {
         min-width: 120px;
         min-height: 44px;
     }
     
-    /* Кнопка "Наверх" - ПОЯВЛЯЕТСЯ РАНЬШЕ */
     .scroll-top {
         width: 50px;
         height: 50px;
@@ -139,7 +116,7 @@
     }
     
     .cart__count {
-        display: none;
+        display: none; 
     }
     
     .scroll-top {
